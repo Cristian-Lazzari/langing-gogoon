@@ -115,6 +115,7 @@ nav .link{
     display: flex;
     justify-content: flex-end;
     gap: 2rem;
+    transition: all 2s linear ;
 }
 nav a{
     color: white;
@@ -122,7 +123,9 @@ nav a{
     font-family: "Montserrat", sans-serif;
     font-size: clamp(16px, 2.5vw, 22px);
 }
-
+.burg{
+    display: none;
+}
 #navbar {
     position: fixed;
     top: 0;
@@ -139,6 +142,60 @@ nav a{
 }
 .navlink-scrolled {
     color: rgb(0, 0, 0) !important; /* Colore della navbar dopo lo scroll */
+}
+
+@media (max-width:960px) {
+    .burg{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 35px;
+        height: 30px;
+        position: fixed;
+        top: 3rem;
+        right: 3rem;
+    }
+    .l{
+        height: 3px;
+        width: 35px;
+        background-color: var(--text);
+        border-radius: 10px;
+    }
+    .off .l1{
+        transform: rotateZ(45deg);
+    }
+    .off .l2{
+        position: absolute;
+        transform: rotateZ(-45deg);
+    }
+    .navimg-scrolled {
+        background-image: url('img/cm.svg') !important;
+    }
+    #navbar{
+        padding: 0;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    #navimg{
+        margin: 2rem;
+        background-image: url('img/wm.svg');
+        width: 70px !important;
+        height: 70px !important;
+        max-width: 70px !important;
+    }
+    .link{
+        transition: all 2s linear ;
+        background-color: white;
+        width: 100% !important;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+    .link a{
+        
+        color: var(--text) !important;
+    }
 }
 /* end */
 
@@ -185,18 +242,20 @@ h3{
     margin: 4rem;
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    /*gap: 30px;*/
+    align-items: flex-start;
+    overflow-x: auto;
+    /* flex-wrap: wrap; */
+    gap: 80px;
 }
 .s-1 .card{
     width: 250px;
     display: flex;
     flex-direction: column;
     gap: 40px;
+    justify-content: flex-start;
 }
 .s-1 .card img{
-    width: 80%;
+    /* width: 80%; */
     height: 240px;
 }
 .s-1 .card h3{
@@ -249,12 +308,13 @@ h3{
 .s-card .right img{
     position: absolute;
     height: 143%;
+    max-width: 45%;
     top: -20%;
     right: 50px;
 }
 .last{
     position: relative;
-    bottom: -100px;
+    bottom: -200px;
 }
 
 .li .p{
@@ -275,14 +335,44 @@ h3{
 
 footer{
     background-color: var(--blue);
-    padding: 90px 10px;
+    padding: 190px 10px;
     color: white;
     text-align: center;
 }
 footer .social-c{
+    max-width:65%;
+    margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 35px;
-    margin-top: 20px;
+    margin-top: 60px;
+}
+
+@media (max-width: 800px) {
+    .s-card{
+        flex-direction: column !important;
+        background: linear-gradient( #F8286C, #876CB0, #39CBFE);
+    }
+    .s-card .left,
+    .s-card .right{
+        width: 100% !important;
+    }
+    #sc1 .right{
+        height: clamp(150px, 33vh, 280px)!important;
+    }
+    #sc2 .right{
+        height: clamp(70px, 21vh, 260px)!important;
+    }
+    .s-card .left{
+        padding: 3rem 4rem;
+    }
+    .s-card .right img{
+        max-height: 65%;
+        max-width: 100% !important;
+        top: 94%;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
 }
