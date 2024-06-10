@@ -407,11 +407,12 @@ footer .social-c{
     .s-card .right{
         width: 100% !important;
     }
+    
     #sc1 .right{
         height: clamp(150px, 33vh, 280px)!important;
     }
     #sc2 .right{
-        height: clamp(70px, 21vh, 260px)!important;
+        height: clamp(220px, 21vh, 260px)!important;
     }
     .s-card .left{
         padding: 3rem 4rem;
