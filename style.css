@@ -76,7 +76,7 @@
 .btn{
     text-decoration: none;
     border-radius: 400px;
-    padding: .5em 1em;
+    padding: .6em 1.2em;
     font-size: clamp(16px, 2.5vw, 20px);
     width: fit-content;
     display: flex;
@@ -86,6 +86,7 @@
     background-color: white;  
     color: var(--pink);
     margin: 0 auto;
+    font-weight: 700;
 }
 .btn-classic{
     border: 1px solid white;
@@ -100,15 +101,16 @@ nav{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 2rem 6rem;
+    padding: 3rem 6rem;
     height: auto;
 }
 #navimg{
     width: 27%;
+    height: 3rem !important;
     background-image: url('img/W.svg') ;
     background-repeat: no-repeat;
     min-width: 60px;
-    max-width: 130px;
+    max-width: 170px;
 }
 nav .link{
     flex-grow: 1;
@@ -131,6 +133,7 @@ nav a{
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 100;
     background-color: transparent;
     transition: background-color 0.3s;
 }
@@ -149,9 +152,8 @@ nav a{
     .burg{
         display: flex;
         flex-direction: column;
-        gap: 10px;
-        width: 35px;
-        height: 30px;
+        gap: 9px;
+        width: 33px;
         position: fixed;
         top: 3rem;
         right: 3rem;
@@ -165,6 +167,9 @@ nav a{
     .l-scrolled{
         background-color: white;
 
+    }
+    .off{
+        top: 3.7rem !important;
     }
     .off .l1{
         transform: rotateZ(45deg);
@@ -184,11 +189,11 @@ nav a{
         align-items: flex-start;
     }
     #navimg{
-        margin: 2rem;
+        margin: 2.3rem;
         background-image: url('img/wm.svg');
-        width: 70px !important;
-        height: 70px !important;
-        max-width: 70px !important;
+        width: 45px !important;
+        height: 45px !important;
+        max-width: 45px !important;
     }
     .link-off{
         height: 0;
@@ -328,8 +333,39 @@ h3{
     position: relative;
     bottom: -200px;
 }
+.li{
+    background-image: url('img/globe.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    z-index: 2;
+    padding: 4rem 0;
+}
+.li .overlay {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.88); /* Bianco con opacità 50% */
+}
+.li h2{
+    margin-bottom: 3rem;
+}
+.li h3,
+.li h2{
+
+    position: relative;
+    z-index: 4;
+}
 
 .li .p{
+    position: relative;
+    z-index: 4;
+    position: relative;
+    z-index: 4;
     display: flex;
     justify-content: space-between;
     margin: 30px 0 0;
