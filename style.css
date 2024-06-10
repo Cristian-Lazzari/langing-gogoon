@@ -115,7 +115,8 @@ nav .link{
     display: flex;
     justify-content: flex-end;
     gap: 2rem;
-    transition: all 2s linear ;
+    transition: display 0s linear 0s;
+    transition: opacity .3s linear .1s;
 }
 nav a{
     color: white;
@@ -158,8 +159,12 @@ nav a{
     .l{
         height: 3px;
         width: 35px;
-        background-color: var(--text);
         border-radius: 10px;
+        background-color: var(--text);
+    }
+    .l-scrolled{
+        background-color: white;
+
     }
     .off .l1{
         transform: rotateZ(45deg);
@@ -168,6 +173,7 @@ nav a{
         position: absolute;
         transform: rotateZ(-45deg);
     }
+    
     .navimg-scrolled {
         background-image: url('img/cm.svg') !important;
     }
@@ -184,8 +190,14 @@ nav a{
         height: 70px !important;
         max-width: 70px !important;
     }
+    .link-off{
+        height: 0;
+        opacity: 0;
+        display: none !important;
+        transition: display 0s linear 0s;
+        transition: opacity .3s linear .1s;
+    }
     .link{
-        transition: all 2s linear ;
         background-color: white;
         width: 100% !important;
         flex-direction: column;
