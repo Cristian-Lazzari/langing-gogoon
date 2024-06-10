@@ -399,6 +399,13 @@ footer .social-c{
 }
 
 @media (max-width: 800px) {
+    .li .p{
+        flex-direction: column;
+    }
+    .li .p .left,
+    .li .p .right{
+        width: 100% !important;
+    }
     .s-card{
         flex-direction: column !important;
         background: linear-gradient( #F8286C, #876CB0, #39CBFE);
@@ -415,7 +422,7 @@ footer .social-c{
         height: clamp(220px, 21vh, 260px)!important;
     }
     .s-card .left{
-        padding: 3rem 4rem;
+        padding: 2rem 2rem;
     }
     .s-card .right img{
         max-height: 65%;
@@ -423,5 +430,9 @@ footer .social-c{
         top: 94%;
         right: 50%;
         transform: translate(50%, -50%);
+    }
+
+    .s-1{
+        
     }
 }
